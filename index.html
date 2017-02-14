@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <title>angularJs Two Way databinding!</title>
+	   <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="css/main.css">
+	   <link rel="stylesheet" href="css/bootstrap.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.js"></script>
+
+</head>
+<body ng-app="calculatorApp">
+<div class="row center-block">
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+<h4 class="text-danger text-center ">Calculator!</h4>
+<!-- this is the use of the controller as syntax in the angularjs. -->
+<div ng-controller="calculatorCtrl as ctrl" class="center-block">
+  <input type="text" ng-model="ctrl.input1" class="text-primary" id="one"></input>
+  <span ng-bind="ctrl.selectorOperation" class="text-danger"></span>
+  <input type="text" ng-model="ctrl.input2" class="text-success" id="one"></input>
+  <button ng-click="ctrl.computeResult()" class="text-primary btn btn-lg">=</button>
+  <span ng-bind="ctrl.resultValue" class="text-danger"></span>
+  <p><button id="pritam">Choose Operation:</button></p>
+<p>
+   <button ng-click="ctrl.ButtonClicked('+')" class="btn btn-lg">Add+</button>
+   <button ng-click="ctrl.ButtonClicked('-')" class="btn btn-lg">Subs-</button>
+
+   <button ng-click="ctrl.ButtonClicked('*')" class="btn btn-lg">Mult*</button>
+   <button ng-click="ctrl.ButtonClicked('/')" class="btn btn-lg">Divi/</button>
+   <button ng-click="ctrl.ButtonClear()" class="btn btn-lg">clearInput</button>
+ </p>
+
+  
+
+</div>
+</div><!--this is for the col -->
+</div><!--this is for row-->
+
+
+
+
+
+
+
+
+     <script src="js/app.js"></script>
+     <!-- this is for the jquery -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="js/main.js"></script>  
+     <script src="js/bootstrap.js"></script> 
+</body>
+</html>
